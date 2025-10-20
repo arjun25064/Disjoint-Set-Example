@@ -41,7 +41,7 @@ class DisjointSet {
     // ----- unionSet ------
     // given two elements, join their respective sets
     // Arguments: t1,t2 are references to the two elements, whose sets, in which they are present
-    // Post calling:  
+    // Post calling: performs a union set operation on the two sets where t1,t2 exists
     void unionSet(const T &t1 , const T &t2) {
             T root1 = find(t1);
             T root2 = find(t2);
