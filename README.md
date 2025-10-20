@@ -25,9 +25,13 @@ The example shows how multiple systems (each represented by an IP address) can b
 ## 📂 Folder Structure
 
 📦 disjoint-set/
+
 ┣ 📜 README.md
+
 ┣ 📜 main.cpp
+
 ┣ 📜 disjoint_set.h
+
 ┣ 📜 system.h
 
 
