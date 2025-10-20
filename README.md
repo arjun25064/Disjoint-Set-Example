@@ -48,6 +48,7 @@ The example shows how multiple systems (each represented by an IP address) can b
 ## ⚙️ Example Network Topology
 
 Network 1: sys1 --- sys2 --- sys3
+
 Network 2: sys4 --- sys5 --- sys6
 
 
@@ -66,6 +67,7 @@ Disjoint Set initiated successfully
 
 set 1 (root: 10.45.103.89) : 10.45.103.89 - 172.20.7.250 - 192.168.57.24 -
 set 2 (root: 11.1.9.11) : 101.101.7.11 - 11.1.9.11 - 25.110.7.11 -
+```
 
 🧰 Build & Run
 Using g++
