@@ -15,7 +15,7 @@ The example shows how multiple systems (each represented by an IP address) can b
   - `makeSet()` — create new elements  
   - `find()` — find the representative (root) of an element’s set  
   - `unionSet()` — merge two sets  
-  - `connected()` — check if two elements belong to the same set  
+  - `connected()` — returns true if two elements belong to the same set else false 
   - `seeAllSets()` — print all disjoint sets (connected components)
 - Uses **path compression** and **union by size** for near-constant time operations.
 - Real-world example with `System` class (representing computers with IP addresses).
@@ -25,8 +25,6 @@ The example shows how multiple systems (each represented by an IP address) can b
 ## 📂 Folder Structure
 
 📦 disjoint-set/
-
-┣ 📜 README.md
 
 ┣ 📜 main.cpp
 
@@ -55,13 +53,16 @@ Network 2: sys4 --- sys5 --- sys6
 ### In Code:
 ```cpp
 
-ds.unionSet(sys1, sys2); // connect sys1 and sys2
-ds.unionSet(sys2, sys3); // connect sys2 and sys3
-//...
-ds.unionSet(sys4, sys5); // connect sys4 and sys5
-ds.unionSet(sys5, sys6); // connect sys5 and sys6 
-
-🖥️ Sample Output
+ds.unionSet(sys1, sys2); // merge sys1 and sys2
+ds.unionSet(sys2, sys3); // merge sys2 and sys3
+// ..
+ds.unionSet(sys4, sys5); // merge sys4 and sys5
+ds.unionSet(sys5, sys6); // merge sys5 and sys6 
+// ..
+ds.connected(sys1,sys2); // returns true, if sys1 and sys2 lie in same set, else false
+```
+### 🖥️ Sample Output
+```
 Disjoint Set initiated successfully 
 192.168.57.24 is connected to 10.45.103.89
 172.20.7.250 is NOT connected to 101.101.7.11
@@ -72,7 +73,6 @@ set 2 (root: 11.1.9.11) : 101.101.7.11 - 11.1.9.11 - 25.110.7.11 -
 
 ### 🧰 Build & Run
 
-Using g++
 ```
 g++ -std=c++17 main.cpp -o disjoint_set
 ```
