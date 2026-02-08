@@ -72,7 +72,9 @@ set 2 (root: 11.1.9.11) : 101.101.7.11 - 11.1.9.11 - 25.110.7.11 -
 🧰 Build & Run
 
 Using g++
-
+```
 g++ -std=c++17 main.cpp -o disjoint_set
-
+```
+```
 ./disjoint_set
+```
