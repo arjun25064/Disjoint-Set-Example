@@ -54,11 +54,12 @@ Network 2: sys4 --- sys5 --- sys6
 
 ### In Code:
 ```cpp
-ds.unionSet(sys1, sys2);
-ds.unionSet(sys2, sys3);
 
-ds.unionSet(sys4, sys5);
-ds.unionSet(sys5, sys6);
+ds.unionSet(sys1, sys2); // connect sys1 and sys2
+ds.unionSet(sys2, sys3); // connect sys2 and sys3
+//...
+ds.unionSet(sys4, sys5); // connect sys4 and sys5
+ds.unionSet(sys5, sys6); // connect sys5 and sys6 
 
 🖥️ Sample Output
 Disjoint Set initiated successfully 
@@ -69,7 +70,7 @@ set 1 (root: 10.45.103.89) : 10.45.103.89 - 172.20.7.250 - 192.168.57.24 -
 set 2 (root: 11.1.9.11) : 101.101.7.11 - 11.1.9.11 - 25.110.7.11 -
 ```
 
-🧰 Build & Run
+### 🧰 Build & Run
 
 Using g++
 ```
