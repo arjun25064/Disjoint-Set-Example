@@ -52,16 +52,22 @@ Network 2: sys4 --- sys5 --- sys6
 
 ### In Code:
 ```cpp
-
-ds.unionSet(sys1, sys2); // merge sys1 and sys2
+// ** Init Disjoint Set ** 
+DisjointSet<ClassType>ds; // initiates disjoint set data structure for class 'ClassType'
+// ** Make Set Calls ** 
+ds.makeSet(sys1); // creates an element sys1 which is of class ClassType
+ds.makeSet(sys2); // similarly create another element 
+// ..
+// ** Union Calls ** 
+ds.unionSet(sys1, sys2); // merge sys1 and sys2 
 ds.unionSet(sys2, sys3); // merge sys2 and sys3
 // ..
 ds.unionSet(sys4, sys5); // merge sys4 and sys5
 ds.unionSet(sys5, sys6); // merge sys5 and sys6 
-// ..
+// ** Check Same set call ** 
 ds.connected(sys1,sys2); // returns true, if sys1 and sys2 lie in same set, else false
 ```
-### 🖥️ Sample Output
+### 🖥️ Sample Output (based on main.cpp() and system.h)
 ```
 Disjoint Set initiated successfully 
 192.168.57.24 is connected to 10.45.103.89
@@ -72,7 +78,7 @@ set 2 (root: 11.1.9.11) : 101.101.7.11 - 11.1.9.11 - 25.110.7.11 -
 ```
 
 ### 🧰 Build & Run
-
+requires g++ for compilation.
 ```
 g++ -std=c++17 main.cpp -o disjoint_set
 ```
